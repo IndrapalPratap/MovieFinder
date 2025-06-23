@@ -16,10 +16,12 @@
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
-					<string>Main</string>
+					<string>TabBar</string>
 				</dict>
 			</array>
 		</dict>
 	</dict>
+    <key>TMDB_API_KEY</key>
+    <string>cd64cee651fb26f8385fedf6bcab982d</string>
 </dict>
 </plist>

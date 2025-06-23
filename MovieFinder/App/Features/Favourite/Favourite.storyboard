@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Favourite View Controller-->
+        <scene sceneID="cWM-P9-eze">
+            <objects>
+                <viewController storyboardIdentifier="FavouriteViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="T85-qo-uSV" customClass="FavouriteViewController" customModule="MovieFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ovw-aq-Qww">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xif-Yp-BIp">
+                                <rect key="frame" x="0.0" y="118" width="393" height="666"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favourite Movies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ap4-DK-BIT">
+                                        <rect key="frame" x="16" y="0.0" width="361" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="att-BU-Tmg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="21"/>
+                                        <color key="textColor" red="0.89413667929999996" green="0.89413667929999996" blue="0.89413667929999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hff-VC-yqD">
+                                        <rect key="frame" x="0.0" y="30" width="393" height="636"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YWm-A1-4yV">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Hff-VC-yqD" firstAttribute="leading" secondItem="xif-Yp-BIp" secondAttribute="leading" id="V1p-Wk-2dB"/>
+                                    <constraint firstItem="ap4-DK-BIT" firstAttribute="top" secondItem="xif-Yp-BIp" secondAttribute="top" id="ZM5-0U-7N8"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hff-VC-yqD" secondAttribute="bottom" id="ie6-8O-CVW"/>
+                                    <constraint firstItem="Hff-VC-yqD" firstAttribute="top" secondItem="ap4-DK-BIT" secondAttribute="bottom" id="j2c-Td-VSh"/>
+                                    <constraint firstAttribute="trailing" secondItem="ap4-DK-BIT" secondAttribute="trailing" constant="16" id="jnY-UE-Ld8"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hff-VC-yqD" secondAttribute="trailing" id="pzd-3k-X6M"/>
+                                    <constraint firstItem="ap4-DK-BIT" firstAttribute="leading" secondItem="xif-Yp-BIp" secondAttribute="leading" constant="16" id="vmi-Pb-NMk"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PyH-ci-rjA"/>
+                        <color key="backgroundColor" red="0.070588238540000001" green="0.05882352591" blue="0.14509806040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="xif-Yp-BIp" firstAttribute="leading" secondItem="PyH-ci-rjA" secondAttribute="leading" id="29M-HW-YoV"/>
+                            <constraint firstItem="PyH-ci-rjA" firstAttribute="trailing" secondItem="xif-Yp-BIp" secondAttribute="trailing" id="pm5-7Y-S2G"/>
+                            <constraint firstItem="PyH-ci-rjA" firstAttribute="bottom" secondItem="xif-Yp-BIp" secondAttribute="bottom" id="rtd-g9-g41"/>
+                            <constraint firstItem="xif-Yp-BIp" firstAttribute="top" secondItem="PyH-ci-rjA" secondAttribute="top" id="zaL-yD-6PI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9KI-wh-DO7"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Hff-VC-yqD" id="zGz-zG-in6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gb0-vr-iN0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3719.8473282442746" y="750.70422535211276"/>
+        </scene>
+    </scenes>
+</document>
